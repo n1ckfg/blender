@@ -182,6 +182,7 @@ static void write_mcol(const OCompoundProperty &prop, const CDStreamConfig &conf
 	Alembic::AbcCoreAbstract::MetaData md;
 	md.set("mayaColorSet", "1");
 
+	//OC4fGeomParam param(prop, name, true, kFacevaryingScope, 1);
 	OC4fGeomParam param(prop, name, true, kFacevaryingScope, 1, 0, md);
 
 	OC4fGeomParam::Sample sample(C4fArraySample(&buffer.front(), buffer.size()), kVertexScope);
